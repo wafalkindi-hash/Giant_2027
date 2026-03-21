@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>العملاق الرقمي 2027</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+            max-width: 90%;
+            width: 400px;
+        }
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #f59e0b; /* لون ذهبي/عنبري */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            width: 80%;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+        .install-hint {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #10b981; /* لون أخضر */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🏛️</div>
+        <h1>مدرسة العملاق الرقمي</h1>
+        <p>مرحباً بك في بوابتك الرقمية السيادية.<br>من هنا تبدأ رحلة التميز والنجاح.</p>
+
+        <a href="#" class="btn" onclick="alert('سيتم تحويلك إلى البوت السيادي قريباً!')">الدخول إلى النظام 🚀</a>
+
+        <div class="install-hint">
+            💡 تلميح: ستظهر لك رسالة أسفل الشاشة لتثبيت التطبيق على هاتفك، اضغط (تثبيت) لتجربة أسرع!
+        </div>
+    </div>
+
+    <script>
+        // تسجيل المحرك الصامت لكي يعمل كـ تطبيق PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker Registered!', reg))
+                    .catch(err => console.log('Service Worker Error', err));
+            });
+        }
+    </script>
+</body>
+</html>
